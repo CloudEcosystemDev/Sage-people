@@ -1,0 +1,88 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "example": "a2J8E000001UjUuUAK"
+        },
+        "employeeId": {
+            "type": "string",
+            "example": "a2G7E000000LlIDUA0"
+        },
+        "amount": {
+            "type": "number",
+            "format": "float",
+            "example": 35000
+        },
+        "multiplier": {
+            "type": "number",
+            "format": "float",
+            "example": 12
+        },
+        "currencyName": {
+            "type": "string",
+            "example": "GBP"
+        },
+        "startDate": {
+            "type": "string",
+            "format": "date",
+            "example": "2018-01-02",
+            "nullable": true
+        },
+        "payCode": {
+            "type": "string",
+            "nullable": true,
+            "example": "X1"
+        },
+        "additionalFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "nullable": true,
+                "required": [
+                    "name",
+                    "value",
+                    "source"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Custom Field"
+                    },
+                    "value": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "nullable": true
+                            },
+                            {
+                                "type": "integer",
+                                "nullable": true
+                            },
+                            {
+                                "type": "boolean",
+                                "nullable": true
+                            },
+                            {
+                                "type": "number",
+                                "nullable": true
+                            },
+                            {
+                                "type": "array",
+                                "nullable": true,
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "example": 24
+                    },
+                    "source": {
+                        "type": "string",
+                        "example": "SomeCustomField__c"
+                    }
+                }
+            }
+        }
+    }
+}

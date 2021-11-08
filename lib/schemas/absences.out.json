@@ -1,0 +1,95 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "example": "a2G7E000000LlIDUA0"
+        },
+        "employeeId": {
+            "type": "string",
+            "example": "a2G7E000000LlIDUA5"
+        },
+        "reason": {
+            "type": "string",
+            "nullable": true,
+            "example": "Planned Vacation"
+        },
+        "startDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true,
+            "example": "2020-03-02"
+        },
+        "endDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true,
+            "example": "2020-03-04"
+        },
+        "duration": {
+            "type": "number",
+            "format": "float",
+            "nullable": true,
+            "example": 3
+        },
+        "durationUnits": {
+            "type": "string",
+            "nullable": true,
+            "example": "Day"
+        },
+        "approved": {
+            "type": "boolean",
+            "example": true
+        },
+        "additionalFields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "nullable": true,
+                "required": [
+                    "name",
+                    "value",
+                    "source"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Custom Field"
+                    },
+                    "value": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "nullable": true
+                            },
+                            {
+                                "type": "integer",
+                                "nullable": true
+                            },
+                            {
+                                "type": "boolean",
+                                "nullable": true
+                            },
+                            {
+                                "type": "number",
+                                "nullable": true
+                            },
+                            {
+                                "type": "array",
+                                "nullable": true,
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ],
+                        "example": 24
+                    },
+                    "source": {
+                        "type": "string",
+                        "example": "SomeCustomField__c"
+                    }
+                }
+            }
+        }
+    }
+}
