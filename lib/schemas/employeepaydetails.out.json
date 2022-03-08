@@ -1,4 +1,109 @@
 {
+    "description": "Response data for pay details of an employee",
     "type": "object",
-    "properties": {}
+    "required": [
+        "data"
+    ],
+    "properties": {
+        "data": {
+            "type": "object",
+            "required": [
+                "id",
+                "employeeId"
+            ],
+            "minProperties": 1,
+            "properties": {
+                "id": {
+                    "readOnly": true,
+                    "type": "string",
+                    "example": "a2K9E000000LlIDUA0"
+                },
+                "employeeId": {
+                    "readOnly": true,
+                    "type": "string",
+                    "example": "a2G7E000000LlIDUA5"
+                },
+                "period": {
+                    "type": "string",
+                    "nullable": true,
+                    "example": "7"
+                },
+                "additionalFields": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "nullable": true,
+                        "required": [
+                            "name",
+                            "value",
+                            "source"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "example": "Custom Field"
+                            },
+                            "value": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "type": "integer",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "type": "boolean",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "type": "number",
+                                        "nullable": true
+                                    },
+                                    {
+                                        "type": "array",
+                                        "nullable": true,
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                ],
+                                "example": 24
+                            },
+                            "source": {
+                                "type": "string",
+                                "example": "SomeCustomField__c"
+                            }
+                        }
+                    }
+                },
+                "document": {
+                    "type": "object",
+                    "nullable": true,
+                    "required": [
+                        "name",
+                        "content"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "example": "Sample.txt"
+                        },
+                        "content": {
+                            "writeOnly": true,
+                            "type": "string",
+                            "format": "byte",
+                            "description": "Base64 encoded file content",
+                            "example": "U2FtcGxlIFRleHQ="
+                        }
+                    }
+                }
+            }
+        },
+        "version": {
+            "type": "string",
+            "example": "4.8"
+        }
+    }
 }

@@ -1,89 +1,115 @@
 {
+    "description": "Response data for Timesheets",
     "type": "object",
+    "required": [
+        "data"
+    ],
     "properties": {
-        "id": {
-            "type": "string",
-            "example": "a2G7E000000LlIDUA0"
-        },
-        "employeeId": {
-            "type": "string",
-            "example": "a2G7E000000LlIDUA5"
-        },
-        "hoursWorked": {
-            "type": "number",
-            "format": "float",
-            "example": 3
-        },
-        "hoursEarned": {
-            "type": "number",
-            "format": "float",
-            "example": 3
-        },
-        "startDate": {
-            "type": "string",
-            "nullable": true,
-            "format": "date",
-            "example": "2020-03-02"
-        },
-        "endDate": {
-            "type": "string",
-            "nullable": true,
-            "format": "date",
-            "example": "2020-08-02"
-        },
-        "status": {
-            "type": "string",
-            "example": "approved"
-        },
-        "additionalFields": {
+        "data": {
             "type": "array",
             "items": {
                 "type": "object",
-                "nullable": true,
                 "required": [
-                    "name",
-                    "value",
-                    "source"
+                    "id",
+                    "employeeId",
+                    "hoursWorked",
+                    "hoursEarned",
+                    "startDate",
+                    "endDate",
+                    "status",
+                    "additionalFields"
                 ],
                 "properties": {
-                    "name": {
+                    "id": {
                         "type": "string",
-                        "example": "Custom Field"
+                        "example": "a2G7E000000LlIDUA0"
                     },
-                    "value": {
-                        "anyOf": [
-                            {
-                                "type": "string",
-                                "nullable": true
-                            },
-                            {
-                                "type": "integer",
-                                "nullable": true
-                            },
-                            {
-                                "type": "boolean",
-                                "nullable": true
-                            },
-                            {
-                                "type": "number",
-                                "nullable": true
-                            },
-                            {
-                                "type": "array",
-                                "nullable": true,
-                                "items": {
-                                    "type": "string"
+                    "employeeId": {
+                        "type": "string",
+                        "example": "a2G7E000000LlIDUA5"
+                    },
+                    "hoursWorked": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 3
+                    },
+                    "hoursEarned": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 3
+                    },
+                    "startDate": {
+                        "type": "string",
+                        "nullable": true,
+                        "format": "date",
+                        "example": "2020-03-02"
+                    },
+                    "endDate": {
+                        "type": "string",
+                        "nullable": true,
+                        "format": "date",
+                        "example": "2020-08-02"
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "approved"
+                    },
+                    "additionalFields": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "nullable": true,
+                            "required": [
+                                "name",
+                                "value",
+                                "source"
+                            ],
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "example": "Custom Field"
+                                },
+                                "value": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string",
+                                            "nullable": true
+                                        },
+                                        {
+                                            "type": "integer",
+                                            "nullable": true
+                                        },
+                                        {
+                                            "type": "boolean",
+                                            "nullable": true
+                                        },
+                                        {
+                                            "type": "number",
+                                            "nullable": true
+                                        },
+                                        {
+                                            "type": "array",
+                                            "nullable": true,
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    ],
+                                    "example": 24
+                                },
+                                "source": {
+                                    "type": "string",
+                                    "example": "SomeCustomField__c"
                                 }
                             }
-                        ],
-                        "example": 24
-                    },
-                    "source": {
-                        "type": "string",
-                        "example": "SomeCustomField__c"
+                        }
                     }
                 }
             }
+        },
+        "version": {
+            "type": "string",
+            "example": "4.8"
         }
     }
 }

@@ -26,23 +26,13 @@
         }
     },
     "triggers": {
-        "salaries": {
-            "main": "./lib/triggers/salaries.js",
-            "title": "Get Salaries",
-            "description": "Retrieve a paginated list of salaries",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/salaries.in.json",
-                "out": "./lib/schemas/salaries.out.json"
-            }
+        "lookup": {
+            "main": "./lib/lookups/lookup.js",
+            "title": "Function to run a lookup",
+            "description": "Function to call an internal trigger or action"
         },
         "employees": {
-            "main": "./lib/triggers/employees.js",
+            "main": "./lib/triggers/trigger.js",
             "title": "Get Employees",
             "description": "Retrieve a paginated list of employees",
             "fields": {
@@ -51,13 +41,36 @@
                     "label": "Debug this step (log more data)"
                 }
             },
+            "callParams": {
+                "pathName": "/employees",
+                "method": "get"
+            },
             "metadata": {
                 "in": "./lib/schemas/employees.in.json",
                 "out": "./lib/schemas/employees.out.json"
             }
         },
+        "salaries": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Salaries",
+            "description": "Retrieve a paginated list of salaries",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "callParams": {
+                "pathName": "/salaries",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/salaries.in.json",
+                "out": "./lib/schemas/salaries.out.json"
+            }
+        },
         "absences": {
-            "main": "./lib/triggers/absences.js",
+            "main": "./lib/triggers/trigger.js",
             "title": "Get Absences",
             "description": "Retrieve a paginated list of absences",
             "fields": {
@@ -66,43 +79,17 @@
                     "label": "Debug this step (log more data)"
                 }
             },
+            "callParams": {
+                "pathName": "/absences",
+                "method": "get"
+            },
             "metadata": {
                 "in": "./lib/schemas/absences.in.json",
                 "out": "./lib/schemas/absences.out.json"
             }
         },
-        "bonuses": {
-            "main": "./lib/triggers/bonuses.js",
-            "title": "Get Bonuses",
-            "description": "Retrieve a paginated list of bonuses",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/bonuses.in.json",
-                "out": "./lib/schemas/bonuses.out.json"
-            }
-        },
-        "absenceBalances": {
-            "main": "./lib/triggers/absenceBalances.js",
-            "title": "Get Absence Balances",
-            "description": "Retrieve a paginated list of absence balances",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/absenceBalances.in.json",
-                "out": "./lib/schemas/absenceBalances.out.json"
-            }
-        },
         "timesheets": {
-            "main": "./lib/triggers/timesheets.js",
+            "main": "./lib/triggers/trigger.js",
             "title": "Get Timesheets",
             "description": "Retrieve a paginated list of timesheets",
             "fields": {
@@ -111,15 +98,57 @@
                     "label": "Debug this step (log more data)"
                 }
             },
+            "callParams": {
+                "pathName": "/timesheets",
+                "method": "get"
+            },
             "metadata": {
                 "in": "./lib/schemas/timesheets.in.json",
                 "out": "./lib/schemas/timesheets.out.json"
+            }
+        },
+        "bonuses": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Bonuses",
+            "description": "Retrieve a paginated list of bonuses",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "callParams": {
+                "pathName": "/bonuses",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/bonuses.in.json",
+                "out": "./lib/schemas/bonuses.out.json"
+            }
+        },
+        "absenceBalances": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Absence Balances",
+            "description": "Retrieve a paginated list of absence balances",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "callParams": {
+                "pathName": "/absenceBalances",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/absenceBalances.in.json",
+                "out": "./lib/schemas/absenceBalances.out.json"
             }
         }
     },
     "actions": {
         "employeeById": {
-            "main": "./lib/actions/employeeById.js",
+            "main": "./lib/actions/action.js",
             "title": "Get Employee by Id",
             "description": "Retrieve a single employee",
             "fields": {
@@ -128,13 +157,17 @@
                     "label": "Debug this step (log more data)"
                 }
             },
+            "callParams": {
+                "pathName": "/employees/{employeeId}",
+                "method": "get"
+            },
             "metadata": {
                 "in": "./lib/schemas/employeeById.in.json",
                 "out": "./lib/schemas/employeeById.out.json"
             }
         },
         "employeepaydetails": {
-            "main": "./lib/actions/employeepaydetails.js",
+            "main": "./lib/actions/action.js",
             "title": "Add Pay Details",
             "description": "Add new pay details for a single employee",
             "fields": {
@@ -142,6 +175,11 @@
                     "viewClass": "CheckBoxView",
                     "label": "Debug this step (log more data)"
                 }
+            },
+            "callParams": {
+                "pathName": "/employees/{employeeId}/payDetails",
+                "method": "post",
+                "requestContentType": "application/json"
             },
             "metadata": {
                 "in": "./lib/schemas/employeepaydetails.in.json",
