@@ -3,10 +3,10 @@
 
 ## Description
 
-A generated OIH connector for the Sage People API API (version 4.8).
+A generated OIH connector for the Sage People API API (version 4.7).
 
-Generated from: https://{domain}/services/apexrest/spapi/v4<br/>
-Generated at: 2021-11-08T16:59:04+01:00
+Generated from: https://developer.sage.com/api/people/api-reference/openapi.json<br/>
+Generated at: 2023-01-17T21:11:23+01:00
 
 ## API Description
 
@@ -31,14 +31,6 @@ Supported authorization schemes:
 
 ## Actions
 
-### Get Employee by Id
-> Retrieve a single employee<br/>
-
-*Tags:* `Employee`
-
-#### Input Parameters
-* `employeeId` - _required_ - Required parameter to identify an employee<br/>
-
 ### Add Pay Details
 > Add new pay details for a single employee<br/>
 
@@ -47,9 +39,17 @@ Supported authorization schemes:
 #### Input Parameters
 * `employeeId` - _required_ - Required parameter to identify an employee<br/>
 
+### Get Employee by Id
+> Retrieve a single employee<br/>
+
+*Tags:* `Employee`
+
+#### Input Parameters
+* `employeeId` - _required_ - Required parameter to identify an employee<br/>
+
 ## License
 
-: sage-people<br/>
+: Sage-people<br/>
                     <br/>
 
 All files of this connector are licensed under the Apache 2.0 License. For details

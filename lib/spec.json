@@ -3,15 +3,15 @@
     "info": {
         "title": "Sage People API",
         "description": "The Sage People API provides a means to extract data from the Sage People application.\n\n# Authorization\n\nYou need a bearer token to authenticate with Sage People API, see the Get Started section for more information.\n\n# Headers\n\nRequests to Sage People API need the following header: `Accept: application/json`\n\n<!-- ReDoc-Inject: <security-definitions> -->\n\n&nbsp;\n",
-        "version": "4.8",
+        "version": "4.7",
         "contact": {
             "name": "Sage",
-            "url": "https://developer.sage.com/people"
+            "url": "https://developer.sage.com/api/people"
         }
     },
     "externalDocs": {
         "description": "Sage People API Documentation",
-        "url": "https://developer.sage.com/people/"
+        "url": "https://developer.sage.com/api/people/"
     },
     "servers": [
         {
@@ -204,7 +204,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -484,7 +484,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -749,7 +749,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -1025,7 +1025,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -1229,7 +1229,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -1425,7 +1425,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -1641,7 +1641,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -1838,7 +1838,7 @@
                                         },
                                         "version": {
                                             "type": "string",
-                                            "example": "4.8"
+                                            "example": "4.7"
                                         }
                                     }
                                 }
@@ -2203,7 +2203,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -2398,7 +2398,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -2963,7 +2963,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -3175,7 +3175,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -3403,7 +3403,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -3655,7 +3655,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -3869,7 +3869,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             },
@@ -4423,7 +4423,7 @@
                     },
                     "version": {
                         "type": "string",
-                        "example": "4.8"
+                        "example": "4.7"
                     }
                 }
             }

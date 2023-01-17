@@ -116,7 +116,7 @@
         },
         "version": {
             "type": "string",
-            "example": "4.8"
+            "example": "4.7"
         }
     }
 }
