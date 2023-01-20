@@ -83,19 +83,6 @@
                 "out": "./lib/schemas/bonuses.out.json"
             }
         },
-        "absenceBalances": {
-            "main": "./lib/triggers/trigger.js",
-            "title": "Get Absence Balances",
-            "description": "Retrieve a paginated list of absence balances",
-            "callParams": {
-                "pathName": "/absenceBalances",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/absenceBalances.in.json",
-                "out": "./lib/schemas/absenceBalances.out.json"
-            }
-        },
         "timesheets": {
             "main": "./lib/triggers/trigger.js",
             "title": "Get Timesheets",
@@ -107,6 +94,19 @@
             "metadata": {
                 "in": "./lib/schemas/timesheets.in.json",
                 "out": "./lib/schemas/timesheets.out.json"
+            }
+        },
+        "absenceBalances": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Absence Balances",
+            "description": "Retrieve a paginated list of absence balances",
+            "callParams": {
+                "pathName": "/absenceBalances",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/absenceBalances.in.json",
+                "out": "./lib/schemas/absenceBalances.out.json"
             }
         }
     },

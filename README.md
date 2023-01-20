@@ -6,7 +6,7 @@
 A generated OIH connector for the Sage People API API (version 4.8).
 
 Generated from: https://developer.sage.com/people/reference/openapi.json<br/>
-Generated at: 2023-01-20T12:41:57+01:00
+Generated at: 2023-01-20T12:48:19+01:00
 
 ## API Description
 
