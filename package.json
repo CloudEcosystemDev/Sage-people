@@ -18,7 +18,7 @@
         "name": "Open Integration Hub"
     },
     "license": "Apache-2.0",
-    "name": "sage-people",
+    "name": "Sage-people",
     "description": "The Sage People API provides a means to extract data from the Sage People application.\n\n# Authorization\n\nYou need a bearer token to authenticate with Sage People API, see the Get Started section for more information.\n\n# Headers\n\nRequests to Sage People API need the following header: `Accept: application/json`\n\n<!-- ReDoc-Inject: <security-definitions> -->\n\n&nbsp;\n",
     "scripts": {
         "start": "node ./node_modules/@openintegrationhub/ferryman/runGlobal.js",

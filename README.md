@@ -5,8 +5,8 @@
 
 A generated OIH connector for the Sage People API API (version 4.8).
 
-Generated from: https://{domain}/services/apexrest/spapi/v4<br/>
-Generated at: 2021-11-08T16:59:04+01:00
+Generated from: https://developer.sage.com/people/reference/openapi.json<br/>
+Generated at: 2023-01-20T12:48:19+01:00
 
 ## API Description
 
@@ -49,7 +49,7 @@ Supported authorization schemes:
 
 ## License
 
-: sage-people<br/>
+: Sage-people<br/>
                     <br/>
 
 All files of this connector are licensed under the Apache 2.0 License. For details
