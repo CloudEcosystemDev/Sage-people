@@ -1,8 +1,8 @@
 {
     "title": "Sage People API",
     "description": "The Sage People API provides a means to extract data from the Sage People application.\n\n# Authorization\n\nYou need a bearer token to authenticate with Sage People API, see the Get Started section for more information.\n\n# Headers\n\nRequests to Sage People API need the following header: `Accept: application/json`\n\n<!-- ReDoc-Inject: <security-definitions> -->\n\n&nbsp;\n",
-    "docsUrl": "https://developer.sage.com/api/people/",
-    "url": "https://developer.sage.com/api/people/api-reference/openapi.json",
+    "docsUrl": "https://developer.sage.com/people/",
+    "url": "https://developer.sage.com/people/reference/openapi.json",
     "envVars": {},
     "credentials": {
         "fields": {
@@ -44,45 +44,6 @@
                 "out": "./lib/schemas/salaries.out.json"
             }
         },
-        "absenceBalances": {
-            "main": "./lib/triggers/trigger.js",
-            "title": "Get Absence Balances",
-            "description": "Retrieve a paginated list of absence balances",
-            "callParams": {
-                "pathName": "/absenceBalances",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/absenceBalances.in.json",
-                "out": "./lib/schemas/absenceBalances.out.json"
-            }
-        },
-        "timesheets": {
-            "main": "./lib/triggers/trigger.js",
-            "title": "Get Timesheets",
-            "description": "Retrieve a paginated list of timesheets",
-            "callParams": {
-                "pathName": "/timesheets",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/timesheets.in.json",
-                "out": "./lib/schemas/timesheets.out.json"
-            }
-        },
-        "bonuses": {
-            "main": "./lib/triggers/trigger.js",
-            "title": "Get Bonuses",
-            "description": "Retrieve a paginated list of bonuses",
-            "callParams": {
-                "pathName": "/bonuses",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/bonuses.in.json",
-                "out": "./lib/schemas/bonuses.out.json"
-            }
-        },
         "absences": {
             "main": "./lib/triggers/trigger.js",
             "title": "Get Absences",
@@ -108,9 +69,61 @@
                 "in": "./lib/schemas/employees.in.json",
                 "out": "./lib/schemas/employees.out.json"
             }
+        },
+        "bonuses": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Bonuses",
+            "description": "Retrieve a paginated list of bonuses",
+            "callParams": {
+                "pathName": "/bonuses",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/bonuses.in.json",
+                "out": "./lib/schemas/bonuses.out.json"
+            }
+        },
+        "absenceBalances": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Absence Balances",
+            "description": "Retrieve a paginated list of absence balances",
+            "callParams": {
+                "pathName": "/absenceBalances",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/absenceBalances.in.json",
+                "out": "./lib/schemas/absenceBalances.out.json"
+            }
+        },
+        "timesheets": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Timesheets",
+            "description": "Retrieve a paginated list of timesheets",
+            "callParams": {
+                "pathName": "/timesheets",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheets.in.json",
+                "out": "./lib/schemas/timesheets.out.json"
+            }
         }
     },
     "actions": {
+        "employeeById": {
+            "main": "./lib/actions/action.js",
+            "title": "Get Employee by Id",
+            "description": "Retrieve a single employee",
+            "callParams": {
+                "pathName": "/employees/{employeeId}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/employeeById.in.json",
+                "out": "./lib/schemas/employeeById.out.json"
+            }
+        },
         "employeepaydetails": {
             "main": "./lib/actions/action.js",
             "title": "Add Pay Details",
@@ -123,19 +136,6 @@
             "metadata": {
                 "in": "./lib/schemas/employeepaydetails.in.json",
                 "out": "./lib/schemas/employeepaydetails.out.json"
-            }
-        },
-        "employeeById": {
-            "main": "./lib/actions/action.js",
-            "title": "Get Employee by Id",
-            "description": "Retrieve a single employee",
-            "callParams": {
-                "pathName": "/employees/{employeeId}",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/employeeById.in.json",
-                "out": "./lib/schemas/employeeById.out.json"
             }
         }
     }
