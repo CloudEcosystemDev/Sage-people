@@ -44,32 +44,6 @@
                 "out": "./lib/schemas/salaries.out.json"
             }
         },
-        "absenceBalances": {
-            "main": "./lib/triggers/trigger.js",
-            "title": "Get Absence Balances",
-            "description": "Retrieve a paginated list of absence balances",
-            "callParams": {
-                "pathName": "/absenceBalances",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/absenceBalances.in.json",
-                "out": "./lib/schemas/absenceBalances.out.json"
-            }
-        },
-        "bonuses": {
-            "main": "./lib/triggers/trigger.js",
-            "title": "Get Bonuses",
-            "description": "Retrieve a paginated list of bonuses",
-            "callParams": {
-                "pathName": "/bonuses",
-                "method": "get"
-            },
-            "metadata": {
-                "in": "./lib/schemas/bonuses.in.json",
-                "out": "./lib/schemas/bonuses.out.json"
-            }
-        },
         "absences": {
             "main": "./lib/triggers/trigger.js",
             "title": "Get Absences",
@@ -81,6 +55,32 @@
             "metadata": {
                 "in": "./lib/schemas/absences.in.json",
                 "out": "./lib/schemas/absences.out.json"
+            }
+        },
+        "timesheets": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Timesheets",
+            "description": "Retrieve a paginated list of timesheets",
+            "callParams": {
+                "pathName": "/timesheets",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheets.in.json",
+                "out": "./lib/schemas/timesheets.out.json"
+            }
+        },
+        "absenceBalances": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Absence Balances",
+            "description": "Retrieve a paginated list of absence balances",
+            "callParams": {
+                "pathName": "/absenceBalances",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/absenceBalances.in.json",
+                "out": "./lib/schemas/absenceBalances.out.json"
             }
         },
         "employees": {
@@ -96,17 +96,17 @@
                 "out": "./lib/schemas/employees.out.json"
             }
         },
-        "timesheets": {
+        "bonuses": {
             "main": "./lib/triggers/trigger.js",
-            "title": "Get Timesheets",
-            "description": "Retrieve a paginated list of timesheets",
+            "title": "Get Bonuses",
+            "description": "Retrieve a paginated list of bonuses",
             "callParams": {
-                "pathName": "/timesheets",
+                "pathName": "/bonuses",
                 "method": "get"
             },
             "metadata": {
-                "in": "./lib/schemas/timesheets.in.json",
-                "out": "./lib/schemas/timesheets.out.json"
+                "in": "./lib/schemas/bonuses.in.json",
+                "out": "./lib/schemas/bonuses.out.json"
             }
         }
     },
