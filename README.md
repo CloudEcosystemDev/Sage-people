@@ -1,4 +1,4 @@
-# <p align="center" width="100%"> <img src="./logo.png" width="250" height="250"> </p> 
+# <p align="center" width="100%"> <img src="./logo.png" width="250" height="250"> </p>
 # <p align="center" width="100%"> Sage People API OIH Connector </p>
 
 ## Description
@@ -6,7 +6,7 @@
 A generated OIH connector for the Sage People API API (version 4.8).
 
 Generated from: https://developer.sage.com/people/reference/openapi.json<br/>
-Generated at: 2023-01-20T12:48:19+01:00
+Generated at: 2023-01-25T10:41:21+01:00
 
 ## API Description
 
@@ -31,16 +31,16 @@ Supported authorization schemes:
 
 ## Actions
 
-### Get Employee by Id
-> Retrieve a single employee<br/>
+### Add Pay Details
+> Add new pay details for a single employee<br/>
 
 *Tags:* `Employee`
 
 #### Input Parameters
 * `employeeId` - _required_ - Required parameter to identify an employee<br/>
 
-### Add Pay Details
-> Add new pay details for a single employee<br/>
+### Get Employee by Id
+> Retrieve a single employee<br/>
 
 *Tags:* `Employee`
 
